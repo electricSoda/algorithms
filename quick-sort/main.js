@@ -77,27 +77,19 @@ function draw() {
 
 draw()
 
-function delay(n) {  
-    n = n || 2000;
-    return new Promise(done => {
-      setTimeout(() => {
-        done();
-      }, n);
-    });
-}
-
 function partition(a, start, end){
     let pivot = a[start]
     let leftwall = start
 
     for (let i=start+1; i<=end; i++) {
-        if (a[i] < pivot) {
-            [a[i], a[leftwall]] = [a[leftwall], a[i]]
-            leftwall = leftwall + 1
-            
-            draw()
-        }
-        delay(intervalAmount)
+        setTimeout(() => {
+            if (a[i] < pivot) {
+                [a[i], a[leftwall]] = [a[leftwall], a[i]]
+                leftwall = leftwall + 1
+                
+                draw()
+            }
+        }, intervalAmount)
     }
     [a[a.indexOf(pivot)], a[leftwall]] = [a[leftwall], a[a.indexOf(pivot)]]
 
