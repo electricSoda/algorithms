@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='styles.css'>
+    <title>Selection Sort</title>
+</head>
+<body>
+    <nav>
+        <a id='header'>Selection Sort</a>
+        <button id='start'>Start</button>    
+        <button id='stop'>Stop</button> 
+        <a>Amount of Elements:</a>   
+        <input type="range" min="1" max="200" value="10" id="elements">
+        <a id='aval'></a>
+        <a> | Greatest value:</a>   
+        <input type="range" min="1" max="700" value="50" id="greatest">
+        <a id='gval'></a>
+        <a> | Greatest to least (Least to greatest by default)</a>   
+        <input type="checkbox" id="type">
+        <a> | Speed (In milliseconds):</a>   
+        <input type="number" value="1000" id="speed">
+    </nav>
+
+    <canvas id='c'></canvas>
+</body>
+<script src='main.js'></script>
+</html>
