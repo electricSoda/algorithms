@@ -1,3 +1,5 @@
+// TODO: FIX BUG THAT HAPPENS WHEN USER PRESSES START MULTIPLE TIMES
+
 Array.prototype.swap = function (x,y) {
     var b = this[x];
     this[x] = this[y];
